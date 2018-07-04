@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-// const users = require("./routes/api/users");
+const messages = require("./routes/api/messages");
 // const posts = require("./routes/api/posts");
 
 const app = express();
@@ -22,7 +22,7 @@ mongoose
   .catch(err => console.log(err));
 
 // Use Routes
-// app.use("/api/users", users);
+app.use("/api/messages", messages);
 // app.use("/api/profile", profile);
 // app.use("/api/posts", posts);
 
